@@ -115,6 +115,8 @@ namespace Pencil.Gaming {
 		internal delegate void HideWindow(GlfwWindowPtr window);
 		[SuppressUnmanagedCodeSecurity]
 		internal delegate GlfwMonitorPtr GetWindowMonitor(GlfwWindowPtr window);
+        [SuppressUnmanagedCodeSecurity]
+        internal delegate GlfwMonitorPtr SetWindowMonitor(GlfwWindowPtr window, int a, int windowPosX, int windowPosY, int windowWidth, int windowHeight, int refreshRate);
 		[SuppressUnmanagedCodeSecurity]
 		internal delegate int GetWindowAttrib(GlfwWindowPtr window,int param);
 		[SuppressUnmanagedCodeSecurity]
@@ -225,6 +227,7 @@ namespace Pencil.Gaming {
 		internal static ShowWindow glfwShowWindow;
 		internal static HideWindow glfwHideWindow;
 		internal static GetWindowMonitor glfwGetWindowMonitor;
+        internal static SetWindowMonitor glfwSetWindowMonitor;
 		internal static GetWindowAttrib glfwGetWindowAttrib;
 		internal static SetWindowUserPointer glfwSetWindowUserPointer;
 		internal static GetWindowUserPointer glfwGetWindowUserPointer;

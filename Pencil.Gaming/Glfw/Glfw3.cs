@@ -163,6 +163,9 @@ namespace Pencil.Gaming {
 		public static GlfwMonitorPtr GetWindowMonitor(GlfwWindowPtr window) {
 			return GlfwDelegates.glfwGetWindowMonitor(window);
 		}
+        public static GlfwMonitorPtr SetWindowMonitor(GlfwWindowPtr window, int a, int windowPosX, int windowPosY, int windowWidth, int windowHeight, int refreshRate) {
+            return GlfwDelegates.glfwSetWindowMonitor(window, a, windowPosX, windowPosY, windowWidth, windowHeight, refreshRate);
+        }
 		public static int GetWindowAttrib(GlfwWindowPtr window, WindowAttrib param) {
 			return GlfwDelegates.glfwGetWindowAttrib(window, (int)param);
 		}
